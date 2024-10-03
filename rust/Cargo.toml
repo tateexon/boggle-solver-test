@@ -1,0 +1,10 @@
+[package]
+name = "rust-boggle"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0.86"
