@@ -119,7 +119,7 @@ mod tests {
     // add tests to load test boards from parent directory
     #[test]
     fn test_board_valid() {
-        let result = Board::load("../test_boards/threeByThree.txt");
+        let result = Board::load("../test_data/threeByThree.txt");
         assert!(
             result.is_ok(),
             "Should have had a valid board load: {:?}",
@@ -135,7 +135,7 @@ mod tests {
 
     #[test]
     fn test_board_invalid() {
-        let result = Board::load("../test_boards/invalid.txt");
+        let result = Board::load("../test_data/invalid_board.txt");
         assert!(
             result.is_err(),
             "Expected the board load to be an error, got: {:?}",
