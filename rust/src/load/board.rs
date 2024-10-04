@@ -69,6 +69,11 @@ impl Board {
 
         Ok(board)
     }
+
+    pub fn coord_in_board(self, pos: (i32, i32)) -> bool {
+        let (x, y) = pos;
+        !(x < 0 || x >= self.size || y < 0 || y >= self.size)
+    }
 }
 
 fn get_clean_board(contents: String) -> Vec<char> {
